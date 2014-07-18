@@ -11,7 +11,7 @@ class Tokumx < Formula
 
   def install
     bin.install Dir["bin/*"]
-    lib.install Dir["lib64/*"]
+    (prefix+'lib64').install Dir["lib64/*"]
     share.install Dir["scripts"]
     doc.install "GNU-AGPL-3.0", "THIRD-PARTY-NOTICES", "NEWS", "README", "README-TOKUKV"
 
