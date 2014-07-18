@@ -1,0 +1,36 @@
+bind_ip = <%= @host %>
+port    = <%= @port %>
+
+dbpath  = <%= @datadir %>
+logpath = <%= @logdir %>/tokumx.log
+
+########################################################################
+# FRACTAL TREE STORAGE OPTIONS
+
+# Amount of memory (in bytes) used to cache documents and indexes in
+# memory, uncompressed.  Value can be specified with K/M/G/T suffix.
+# Default is half of physical memory, determined at startup.
+#cacheSize = 8G
+
+# Use direct I/O to access data on disk, bypassing the kernel page
+# cache.  When using direct I/O, it is usually good to set cacheSize
+# higher (around 80% of physical memory).  Out-of-memory workloads
+# typically perform better with direct I/O on and a larger cacheSize.
+#directio = false
+
+# Flush the recovery log every logFlushPeriod milliseconds (similar to
+# journalCommitInterval in vanilla mongodb).  Unlike vanilla mongodb,
+# logFlushPeriod=0 means flush after every operation commit, which can
+# be slow.  getLastError commands with {j:1} force this flush.  Valid
+# values are 0-300ms, default is 100ms.
+#logFlushPeriod = 100
+
+# Directory where the recovery log (similar to mongodb durability
+# journal) is stored.
+#logDir = <same as dbpath>
+
+# Directory where TokuMX will place temporary files used by the bulk
+# loader for building collections and indexes (used by mongorestore,
+# mongoimport, and non-background index creation).
+#tmpDir = <same as dbpath>
+########################################################################
