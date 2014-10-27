@@ -1,13 +1,13 @@
 require "formula"
 
 class Tokumx < Formula
-  homepage "http://www.tokutek.com/products/tokumx-for-mongodb"
-  version "1.5.0-boxen1"
+  homepage "http://www.tokutek.com/tokumx-for-mongodb"
+  version "2.0.0-boxen1"
   conflicts_with "mongodb"
-  url "https://s3.amazonaws.com/tokumx-1.5.0/tokumx-1.5.0-osx-x86_64-main.tar.gz"
-  sha1 "4151a40a6f81c1cb3c226ae24ae429f897609cbb"
+  url "https://s3.amazonaws.com/tokumx-2.0.0/tokumx-2.0.0-osx-x86_64-main.tar.gz"
+  sha1 "ad575f0868a778bca45eea404346e9823d6d5ef2"
 
-  raise FormulaSpecificationError, 'Formula requires Mavericks (OSX 10.9)' unless MacOS.version == :mavericks
+  raise FormulaSpecificationError, 'Formula requires Mavericks or Yosemite (OSX 10.9 or 10.10)' unless MacOS.version >= :mavericks
 
   def install
     bin.install Dir["bin/*"]

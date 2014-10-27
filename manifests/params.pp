@@ -16,7 +16,7 @@ class tokumx::params {
       $port       = 17017
 
       $package    = 'boxen/brews/tokumx'
-      $version    = '1.5.0-boxen1'
+      $version    = '2.0.0-boxen1'
 
       $service    = 'dev.tokumx'
     }
